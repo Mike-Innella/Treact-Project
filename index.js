@@ -6,11 +6,17 @@ function closeMenu() {
   document.body.classList.remove("menu--open");
 }
 
+function activateOnLoad() {
+  var landingContent = document.getElementById("landing--content");
+  var featuresContent = document.getElementById("features");
+  landingContent.classList.add("active");
+  featuresContent.classList.add("active");
+}
+window.addEventListener("DOMContentLoaded", activateOnLoad);
 window.addEventListener("scroll", function () {
   var landingContent = document.getElementById("landing--content");
   var positionFromTop = landingContent.getBoundingClientRect().top;
   var windowHeight = window.innerHeight;
-
   if (positionFromTop - windowHeight <= 0) {
     landingContent.classList.add("active");
   }
@@ -19,7 +25,6 @@ window.addEventListener("scroll", function () {
   var featuresContent = document.getElementById("features");
   var positionFromTop = featuresContent.getBoundingClientRect().top;
   var windowHeight = window.innerHeight;
-
   if (positionFromTop - windowHeight <= 0) {
     featuresContent.classList.add("active");
   }

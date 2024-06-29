@@ -562,14 +562,17 @@ a.quality--btn:hover {
 .steps__content--list {
   display: flex;
   flex-direction: column;
+  cursor: auto;
 }
 .steps__content--list h3 {
   padding: 2rem;
+  cursor: auto;
 }
 .step {
   display: flex;
   flex-direction: row !important;
   justify-content: space-between;
+  cursor: auto;
 }
 .step--number {
   display: inline;
@@ -827,7 +830,7 @@ a.quality--btn:hover {
   opacity: 0;
 }
 #testimonials {
-  margin-top: 128px !important;
+  margin-top: 128px;
 }
 #testimonials.active {
   transform: translateX(0);
@@ -1012,6 +1015,7 @@ a.quality--btn:hover {
   .landing__content {
     width: 100%;
     padding: 24px;
+    margin-bottom: 136px;
   }
   .landing__title {
     font-size: 2rem;
@@ -1272,17 +1276,11 @@ a.quality--btn:hover {
   .purple--text {
     overflow: hidden !important;
   }
-  html,
-  main,
-  body,
-  * {
-    overflow-x: hidden !important;
-  }
   .btn__menu {
     overflow: hidden;
   }
   #testimonials {
-    margin-top: 0;
+    margin-top: 48px;
     padding-top: 0;
   }
   .testimony__content--text .textContainer,
@@ -1314,15 +1312,9 @@ a.quality--btn:hover {
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: blue; /* Debugging color */
   }
   .slides-container {
-    display: flex;
     flex-direction: row;
-    overflow: hidden;
-    width: 100%;
-    background-color: red; /* Debugging color */
-    border: 2px solid orange; /* Debugging border */
   }
   .review {
     margin: 0;
@@ -1333,7 +1325,6 @@ a.quality--btn:hover {
     min-width: 100%;
     max-width: 100%;
     flex: 0 0 50%;
-    border: 1px solid yellow; /* Debugging border */
   }
   .review--person {
     display: flex;
@@ -1341,6 +1332,9 @@ a.quality--btn:hover {
     width: 100%;
     align-items: center;
     margin-left: 0;
+  }
+  .review--person img {
+    margin-left: 16px;
   }
   .review--img {
     margin-right: 0;
@@ -1364,7 +1358,7 @@ a.quality--btn:hover {
   }
   .star--wrapper {
     padding: 12px 4px;
-    margin: 0 0 0 8px;
+    margin: 0 0 0 12px;
   }
   .stars i {
     padding: 4px 0;
@@ -1671,13 +1665,17 @@ a.quality--btn:hover {
   .section__title {
     font-size: 2rem;
   }
-  .pricing__content {
-    width: 100%;
-    max-width: 100%;
-    padding: 0.5rem;
-  }
   #pricing {
     margin: 0 auto;
+  }
+  #pricing .container{
+    height: auto;
+  }
+  .pricing__content {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    padding: 0.5rem;
   }
   .pricing {
     width: 100%;
@@ -1725,12 +1723,9 @@ a.quality--btn:hover {
   .purple--text {
     overflow: hidden !important;
   }
-  html,
-  main,
-  body,
-  * {
-    overflow-x: hidden !important;
-  }
+#testimonials {
+  margin-top: 48px auto;
+}
   .testimony__content {
     display: flex;
     flex-direction: column;
@@ -1751,6 +1746,9 @@ a.quality--btn:hover {
     padding: 48px auto;
     margin: 48px auto;
   }
+  .review {
+    width: 100%;
+  }
   .reviews__img--wrapper img {
     padding: 0 16px;
     margin-top: 0;
@@ -1758,6 +1756,9 @@ a.quality--btn:hover {
   .reviews--wrapper {
     padding: 0 16px;
     margin-top: 0;
+  }
+  .arrows {
+    margin-right: 24px;
   }
 }
 
@@ -1827,6 +1828,14 @@ a.quality--btn:hover {
   }
   .landing__input {
     padding: 8px;
+    margin-bottom: 0;
+  }
+  .landing__img--wrapper,
+  .landing__img,
+  .landing__img img {
+    margin: 0;
+    width: 100%;
+    height: auto;
   }
   .email--btn {
     font-size: 1.25rem;
@@ -2069,17 +2078,20 @@ a.quality--btn:hover {
   .plan .textContainer .section__text > * {
     flex: 1;
   }
-  html,
-  main,
-  body,
-  * {
-    overflow-x: hidden !important;
-  }
   .review .textContainer h4 {
     margin-left: 0;
   }
   .review--person .textContainer h4 {
     margin-left: 24px;
+  }
+  .review {
+    padding: 16px;
+  }
+  .slides-container .review--person .textContainer h4 {
+    margin-left: 28px;
+  }
+  .star--wrapper {
+    margin-left: 0;
   }
 }
 
@@ -2092,7 +2104,8 @@ a.quality--btn:hover {
     margin: 0 4px;
     padding: 0 4px;
   }
-  .btn__menu {
+  .btn__menu,
+  .btn__menu--close {
     overflow: hidden;
   }
   section,
@@ -2256,9 +2269,7 @@ a.quality--btn:hover {
     width: 100%;
     padding: 4px 0px;
   }
-  html,
-  main,
-  body {
-    overflow-x: hidden !important;
+  .arrows {
+    bottom: -15%;
   }
 }
