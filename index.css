@@ -195,7 +195,7 @@ body.menu--open .menu__backdrop {
   align-items: center;
   width: 2.5rem;
 }
-.nav__img {
+.nav__img i {
   border: 2px solid transparent;
   padding: 8px 16px;
   background-color: rgb(100, 21, 255);
@@ -204,10 +204,8 @@ body.menu--open .menu__backdrop {
   margin-right: 12px;
   text-align: center;
   cursor: no-drop;
-}
-.fa-sharp {
+  font-weight: 1100;
   font-size: 1.5rem;
-  font-weight: 900;
 }
 .nav__img--link {
   margin-left: 36px;
@@ -377,6 +375,7 @@ body.menu--open .menu__backdrop {
   width: 100%;
 }
 .section__title {
+  font-weight: 900;
   font-size: 3rem;
   line-height: 1.5rem;
   padding: 2rem;
@@ -702,6 +701,11 @@ a.quality--btn:hover {
   text-align: center;
   width: 100%;
 }
+#pricing .container {
+  height: 101vh;
+  max-height: fit-content;
+  margin-bottom: 128px;
+}
 .pricing__content .textContainer {
   margin: 2rem;
   padding: 2rem;
@@ -811,6 +815,130 @@ a.quality--btn:hover {
   transform: translateY(-2px);
 }
 
+/* Testimonials */
+
+#testimonials {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1280px;
+  transform: translateX(-200%);
+  opacity: 0;
+}
+#testimonials {
+  margin-top: 128px !important;
+}
+#testimonials.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+.testimony__content {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+}
+.testimony__content--text {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: 16px;
+}
+.testimony__content--text .section__title {
+  margin-left: 0;
+  padding-left: 0;
+}
+.reviews__img--wrapper {
+  display: flex;
+  width: 50%;
+  padding: 16px;
+}
+.arrows {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.reviews--wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.slides-container {
+  display: flex;
+  transition: 300ms ease-in-out;
+  width: 100%;
+}
+.review {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 100%;
+  flex: 0 0 50%;
+}
+.review--person {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  margin-left: 16px;
+}
+.review--person .textContainer {
+  width: 100%;
+}
+.review--person h4,
+.review--person .section__text--subtext {
+  display: flex;
+  flex-direction: column;
+}
+.star--wrapper {
+  margin-left: 16px;
+}
+.stars {
+  display: flex;
+  flex-direction: row;
+  color: gold;
+  text-shadow: -1px -1px black, -1px 1px black, 1px 1px black, 1px -1px black;
+}
+.review--img img {
+  width: 5rem;
+  height: auto;
+  border: 2px solid rgb(226, 232, 240);
+  border-radius: 9999px;
+}
+.arrows {
+  position: absolute;
+  right: 0;
+  top: 75%;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  margin-right: 64px;
+  font-size: 1.5rem;
+}
+.arrows button {
+  display: inline-block;
+  background-color: white;
+  color: rgb(100, 21, 255);
+  padding: 12px;
+  border: 2px solid rgb(226, 232, 240);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 300ms ease;
+}
+.left:hover,
+.right:hover {
+  border: 2px solid rgb(226, 232, 240);
+  color: rgb(71, 13, 188);
+  background-color: rgb(160, 174, 192);
+}
+.left {
+  transform: translateX(-25%);
+}
+.right {
+  transform: translateX(25%);
+}
+
 /* Media Queries */
 
 @media (max-width: 1000px) {
@@ -846,8 +974,7 @@ a.quality--btn:hover {
     margin: 0 auto;
     padding: 0 auto;
     align-items: center;
-  }
-  .btn__menu {
+    overflow: hidden;
     display: block;
     position: absolute;
     top: 12px;
@@ -1125,6 +1252,12 @@ a.quality--btn:hover {
   #pricing {
     margin: 0 auto;
   }
+  #pricing .container {
+    height: 120vh;
+    max-height: fit-content;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
   .pricing {
     width: 100%;
     margin-top: 0;
@@ -1144,6 +1277,96 @@ a.quality--btn:hover {
   body,
   * {
     overflow-x: hidden !important;
+  }
+  #testimonials {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .testimony__content--text .textContainer,
+  .testimony__content--text .section__title {
+    text-align: left;
+    margin: 0;
+    justify-content: center;
+    padding: 16px 0;
+  }
+  .reviews__img--wrapper {
+    display: flex;
+    width: 50%;
+    padding: 16px;
+  }
+  .arrows {
+    position: absolute;
+    right: 0;
+    top: 75%;
+    gap: 4px;
+    margin-right: 4px;
+    padding: 16px;
+    font-size: 1.5rem;
+    z-index: 50;
+  }
+  /* For debugging purposes */
+  .reviews--wrapper {
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: blue; /* Debugging color */
+  }
+  .slides-container {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    width: 100%;
+    background-color: red; /* Debugging color */
+    transform: translateX(-${currentSlide * 100}%);
+    border: 2px solid orange; /* Debugging border */
+  }
+  .review {
+    margin: 0;
+    padding: 0;
+    display: block;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 100%;
+    max-width: 100%;
+    flex: 0 0 50%;
+    border: 1px solid yellow; /* Debugging border */
+  }
+  .review--person {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    margin-left: 0;
+  }
+  .review--img {
+    margin-right: 0;
+    padding-right: 0;
+  }
+  .review--img img {
+    margin-right: 24px;
+  }
+  .review--person .textContainer,
+  .review--person .textContainer h4 {
+    display: flex;
+    margin-left: 0;
+    padding-left: 0;
+    text-align: left;
+  }
+  .review .textContainer h4 {
+    width: 100%;
+    text-align: left;
+    margin: 0 0 0 28px;
+    padding: 0 0 0 2px;
+  }
+  .star--wrapper {
+    padding: 12px 4px;
+    margin: 0 0 0 8px;
+  }
+  .stars i {
+    padding: 4px 0;
   }
 }
 
@@ -1506,6 +1729,34 @@ a.quality--btn:hover {
   * {
     overflow-x: hidden !important;
   }
+  .testimony__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  .testimony__content--text .section__text {
+    text-align: center;
+    padding: 16px;
+  }
+  .review .section__text {
+    text-align: left;
+    padding: 0;
+  }
+  .testimony__content--text,
+  .reviews__img--wrapper {
+    width: 100%;
+    padding: 48px auto;
+    margin: 48px auto;
+  }
+  .reviews__img--wrapper img {
+    padding: 0 16px;
+    margin-top: 0;
+  }
+  .reviews--wrapper {
+    padding: 0 16px;
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1820,6 +2071,12 @@ a.quality--btn:hover {
   body,
   * {
     overflow-x: hidden !important;
+  }
+  .review .textContainer h4 {
+    margin-left: 0;
+  }
+  .review--person .textContainer h4 {
+    margin-left: 24px;
   }
 }
 

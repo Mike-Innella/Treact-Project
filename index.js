@@ -60,3 +60,29 @@ window.addEventListener("scroll", function () {
     priceContent.classList.add("active");
   }
 });
+window.addEventListener("scroll", function () {
+  var reviewContent = document.getElementById("testimonials");
+  var positionFromTop = reviewContent.getBoundingClientRect().top;
+  var windowHeight = window.innerHeight;
+
+  if (positionFromTop - windowHeight <= 0) {
+    reviewContent.classList.add("active");
+  }
+});
+
+let currentSlide = 0;
+
+function moveSlide(direction) {
+  const slides = document.querySelectorAll(".review");
+  const totalSlides = slides.length;
+
+  slides[currentSlide].classList.remove("active");
+  currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+  slides[currentSlide].classList.add("active");
+
+  const transformValue = `translateX(-${currentSlide * 100}%)`;
+  document.querySelector(".slides-container").style.transform = transformValue;
+
+  console.log(`Transform applied: ${transformValue}`);
+  console.log(`Current Slide: ${currentSlide}`);
+}
