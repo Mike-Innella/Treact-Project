@@ -1278,6 +1278,9 @@ a.quality--btn:hover {
   * {
     overflow-x: hidden !important;
   }
+  .btn__menu {
+    overflow: hidden;
+  }
   #testimonials {
     margin-top: 0;
     padding-top: 0;
@@ -1304,7 +1307,6 @@ a.quality--btn:hover {
     font-size: 1.5rem;
     z-index: 50;
   }
-  /* For debugging purposes */
   .reviews--wrapper {
     height: auto;
     position: relative;
@@ -1320,7 +1322,6 @@ a.quality--btn:hover {
     overflow: hidden;
     width: 100%;
     background-color: red; /* Debugging color */
-    transform: translateX(-${currentSlide * 100}%);
     border: 2px solid orange; /* Debugging border */
   }
   .review {
@@ -1390,6 +1391,7 @@ a.quality--btn:hover {
   .btn__menu {
     margin: 0 auto;
     padding: 0 auto;
+    overflow: hidden;
     align-items: center;
   }
   .btn__menu {
@@ -1775,6 +1777,7 @@ a.quality--btn:hover {
   .btn__menu {
     margin: 0 auto;
     padding: 0 auto;
+    overflow: hidden;
     align-items: center;
   }
   .btn__menu {
@@ -2088,6 +2091,9 @@ a.quality--btn:hover {
   .row {
     margin: 0 4px;
     padding: 0 4px;
+  }
+  .btn__menu {
+    overflow: hidden;
   }
   section,
   main,
