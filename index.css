@@ -1426,6 +1426,7 @@ a.quality--btn:hover {
   #features {
     height: fit-content;
     padding: 32px;
+    margin: 0 auto;
   }
   .features__content--highlights,
   .features__content--text {
@@ -1436,6 +1437,7 @@ a.quality--btn:hover {
   .features__content--highlights {
     max-height: fit-content;
     width: 100%;
+    margin: 0 auto;
   }
   .highlight .textContainer {
     text-align: left;
@@ -1842,6 +1844,11 @@ a.quality--btn:hover {
     width: 50%;
     margin-right: 0.25rem;
   }
+  .footer__lists {
+    justify-content: space-between;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1928,6 +1935,12 @@ a.quality--btn:hover {
   .review {
     justify-content: space-between;
   }
+  .slide {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
   .review--person .textContainer {
     width: 35%;
     flex-wrap: wrap;
@@ -1950,6 +1963,13 @@ a.quality--btn:hover {
     padding-right: 0;
     width: 100%;
   }
+  .star--wrapper {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    width: 100%;
+    margin-left: 20px;
+  }
   .faq__content--questions {
     width: 100%;
     max-width: 650px;
@@ -1970,8 +1990,6 @@ a.quality--btn:hover {
   }
   .footer__lists {
     width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
   }
 }
 @media (max-width: 480px) {
@@ -2332,6 +2350,20 @@ a.quality--btn:hover {
     justify-content: center;
     text-align: center;
   }
+  .reviews--wrapper {
+    overflow: visible;
+    height: 64vh;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .testimony__content--text {
+    height: 100vh;
+  }
+  .slides-container {
+    margin-top: 0;
+    padding-top: 0;
+    top: 15%;
+  }
   .star--wrapper {
     text-align: center;
     display: flex;
@@ -2379,11 +2411,21 @@ a.quality--btn:hover {
     padding-right: 0 !important;
     padding-left: 0 !important;
   }
+  .slide:nth-child(2) h4 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .star--wrapper {
+    margin-left: 0;
+  }
   .arrows {
     display: flex;
     justify-content: center;
     top: 0;
-    bottom: -100%;
+    bottom: -92%;
     right: 0;
     left: 0;
   }
@@ -2393,6 +2435,28 @@ a.quality--btn:hover {
   .faq__content {
     margin: 0 auto;
   }
+  .faq__content--header {
+    padding: 1rem 0px;
+  }
+  .faq__content--header .textContainer {
+    margin-left: 0;
+    padding-left: 0;
+    margin-right: 0;
+    padding-right: 0;
+  }
+  .faq__content--header .textContainer .section__title {
+    font-size: 2.25rem !important;
+    padding-bottom: 2rem;
+    letter-spacing: 0.025rem;
+    margin-left: 0;
+    padding-left: 0;
+    margin-right: 0;
+    padding-right: 0;
+  }
+  .faq__content--header .textContainer .section__text {
+    width: 90%;
+    margin-bottom: 24px;
+  }
   .faq__content--questions {
     width: 100%;
     max-width: 400px;
@@ -2400,14 +2464,92 @@ a.quality--btn:hover {
     margin: 0 auto;
     overflow: hidden;
   }
+  .accordion-button {
+    font-size: 1.125rem;
+  }
+  .section__text--question {
+    font-size: 0.875rem;
+  }
+  .contentbox {
+    width: 440px;
+    height: 350px;
+  }
+  .contentbox--text {
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 2rem 2rem 0.5rem 2rem;
+  }
   .contentbox--buttons {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-right: 0;
     margin-left: 0;
+    padding-bottom: 2rem;
+  }
+  .getstart,
+  .contact {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+  }
+  .footer__lists {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+  }
+  .footer__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  .footer__end {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  .footer--logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .footer--cr {
+    margin: 2rem;
+  }
+  .media--link {
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }
 @media (max-width: 400px) {
+
+  .testimony__content--text {
+    height: 104vh;
+  }
+  .reviews--wrapper {
+    margin-top: 0;
+    padding-top: 0;
+    justify-content: start;
+    height: 72vh;
+  }
+  .slides-container {
+    height: 52vh;
+  }
+  .slides-container .review {
+    display: flex;
+    justify-content: space-between;
+  }
+  .arrows {
+    bottom: -92%;
+  }
 }
