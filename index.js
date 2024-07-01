@@ -74,6 +74,33 @@ window.addEventListener("scroll", function () {
     reviewContent.classList.add("active");
   }
 });
+window.addEventListener("scroll", function () {
+  var faqContent = document.getElementById("faq");
+  var positionFromTop = faqContent.getBoundingClientRect().top;
+  var windowHeight = window.innerHeight;
+
+  if (positionFromTop - windowHeight <= 0) {
+    faqContent.classList.add("active");
+  }
+});
+window.addEventListener("scroll", function () {
+  var getstartContent = document.getElementById("getstarted");
+  var positionFromTop = getstartContent.getBoundingClientRect().top;
+  var windowHeight = window.innerHeight;
+
+  if (positionFromTop - windowHeight <= 0) {
+    getstartContent.classList.add("active");
+  }
+});
+window.addEventListener("scroll", function () {
+  var footerContent = document.getElementById("footer");
+  var positionFromTop = footerContent.getBoundingClientRect().top;
+  var windowHeight = window.innerHeight;
+
+  if (positionFromTop - windowHeight <= 0) {
+    footerContent.classList.add("active");
+  }
+});
 
 let currentSlide = 0;
 
@@ -91,3 +118,24 @@ function moveSlide(direction) {
   console.log(`Transform applied: ${transformValue}`);
   console.log(`Current Slide: ${currentSlide}`);
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".accordion-button");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const panel = button.nextElementSibling;
+
+      const isOpen = panel.classList.contains("open");
+
+      document.querySelectorAll(".accordion-panel").forEach((p) => {
+        p.classList.remove("open");
+        p.style.maxHeight = null;
+      });
+
+      if (!isOpen) {
+        panel.classList.add("open");
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  });
+});
